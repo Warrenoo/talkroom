@@ -8,4 +8,5 @@
 #= require_tree ./channels
 #
 @App ||= {}
-App.cable = ActionCable.createConsumer("websocket")
+App.cable = ActionCable.createConsumer("/websocket")
+

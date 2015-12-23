@@ -1,6 +1,6 @@
 <div class="message">
   <div>
     <p><%= time_format message.created_at %></p>
-    <p><%= message.content %></p>
+    <p><%= "#{message.ip}: #{message.content}" %></p>
   </div>
 </div>

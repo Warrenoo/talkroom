@@ -1,7 +1,14 @@
-<h1>Welcome TalkRoom</h1>
+<% content_for :header do %>
+  <%= action_cable_meta_tag %>
+<% end %>
+
+<h1><%= @room.name %></h1>
 <% if @has_more %>
   <div>隐藏更多聊天记录...</div>
 <% end %>
+
+<input type="hidden" value="<%=@room.id%>" id="room_id"/>
+
 <div id="messages">
   <%= render @messages %>
 </div>
