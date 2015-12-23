@@ -1,0 +1,12 @@
+<h1>Welcome TalkRoom</h1>
+<% if @has_more %>
+  <div>隐藏更多聊天记录...</div>
+<% end %>
+<div id="messages">
+  <%= render @messages %>
+</div>
+
+<form>
+  <label>Say</label>
+  <input type="text" data-behavior="room_speaker">
+</form>

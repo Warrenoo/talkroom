@@ -1,0 +1,18 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  reconnect: true
+  database: talkroom
+  pool: 5
+  username: root
+  timeout: 5000
+  host: localhost
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
